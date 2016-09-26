@@ -1061,6 +1061,22 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('#subForm').click(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "https://formspree.io/webkitten.dev@gmail.com",
+			data: $("#form").serialize(),
+			dataType: "json"
+		}).done(function() {
+			$('#subForm').html('ОТПРАВЛЕНО! <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>')
+			setTimeout(function() {
+				$("#form").trigger("reset");
+				$('#subForm').html("ОТПРАВИТЬ")
+			}, 1000);
+		});
+	})
+
 	$(".top_mnu ul a").click(function() {
 		$(".top_mnu").fadeOut(600);
 		$(".sandwich").toggleClass("active");
