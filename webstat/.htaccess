@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/webkitten.tk/webstat"
+AuthUserFile /var/www/vh136480/data/etc/18090006.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>
