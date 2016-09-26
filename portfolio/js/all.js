@@ -1048,13 +1048,14 @@ $(document).ready(function() {
 	$("#form").submit(function() {
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
+			url: "https://formspree.io/webkitten.dev@gmail.com",
+			data: $(this).serialize(),
+			dataType: "json"
 		}).done(function() {
-			alert("Отправлено!");
+			$('#form button').html('ОТПРАВЛЕНО! <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>')
 			setTimeout(function() {
-				
 				$("#form").trigger("reset");
+				$('#form button').html("ОТПРАВИТЬ")
 			}, 1000);
 		});
 		return false;
