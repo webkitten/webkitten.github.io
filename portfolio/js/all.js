@@ -974,8 +974,34 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 })( jQuery );
 
 $(document).ready(function() {
+	//$('.gif').gifplayer();
 
+	$('.showGif').click(function(e) {
+		e.preventDefault();
+		var thisUrl = $(this).attr('gif');
+		var win = window.open(thisUrl, '_blank');
+		if (win) {
+		    //Browser has allowed it to be opened
+		    win.focus();
+		} else {
+		    //Browser has blocked it
+		    alert('Please allow popups for this website');
+		}
+	})
 
+	$('.portfGoAwayLink').click(function(e) {
+		e.preventDefault();
+		var thisUrl = $(this).attr('link');
+		var win = window.open(thisUrl, '_blank');
+		if (win) {
+		    //Browser has allowed it to be opened
+		    win.focus();
+		} else {
+		    //Browser has blocked it
+		    alert('Please allow popups for this website');
+		}
+	})
+	//portfGoAwayLink
 
 	$("#portfolio_grid").mixItUp();
 
