@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	console.log("Hi!")
 	$.ajax({
-		url: "https://github.com/webkitten/jsonp-test/blob/master/2009g-06m.json",
+		url: "https://cdn.rawgit.com/webkitten/jsonp-test/master/2009g-06m.json",
 		dataType: 'jsonp',
 		crossDomain: true,
 		success: function(results){
