@@ -1,15 +1,5 @@
 $(document).ready(function(){
 	console.log("Hi!")
-	$.ajax({
-		url: "https://cdn.rawgit.com/webkitten/jsonp-test/master/2009g-06m.json",
-		dataType: 'jsonp',
-		crossDomain: true,
-		success: function(results){
-			console.log(results)
-		},
-		error: function(err) {
-			console.log(err)
-		}
-	});
-
+	var data1 = JSON.parse($("#data1").html());
+	console.log(data1)
 })
