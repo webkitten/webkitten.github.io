@@ -33,7 +33,7 @@ MongoClient.connect( MongoUrl, ( err, db ) => {
       seenDocs++;
       let postComs = doc['comments'];
       if( postComs ) {
-        for( let c = 1; c < postComs.length; c++ ) {
+        for( let c = 0; c < postComs.length; c++ ) {
           let com = postComs[c];
           if( com.comment_author === users['user1'] ) {
             com.link = doc.link + "#comment_" + com.comment_id;
