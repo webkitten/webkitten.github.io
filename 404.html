@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ТЧЕТЫРЕСТА</title>
+</head>
+<body>
+  <h1>404!</h1>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script type="text/javascript">
+    setTimeout(function() {
+      $.ajax({
+        url: 'https://api.myjson.com/bins/alij3',
+        success: function(err, data) {
+          console.log(err);
+          console.log(data);
+        }
+      })
+      .done(function() {
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+    }, 10000);
+  </script>
+</body>
+</html>
