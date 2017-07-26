@@ -3,7 +3,7 @@ var Datastore = require( 'nedb' );
 var MongoClient = require( 'mongodb' ).MongoClient;
 var MongoUrl = 'mongodb://localhost:27017/allpikabu2';
 var MongoCollaction = 'allpikabu2';
-
+// sad
 var user1 = new Datastore( { filename: 'user1.db', autoload: true } );
 var user2 = new Datastore( { filename: 'user2.db', autoload: true } );
 var user3 = new Datastore( { filename: 'user3.db', autoload: true } );
