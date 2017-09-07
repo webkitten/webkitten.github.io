@@ -353,7 +353,7 @@
           changePage: function (e) {
             var t = jQuery("#" + e);
             "" === t.find(".data").html() && (t.find(".data").html('<div class="clusterize"> <div class="clusterize-scroll" id="' + e + '_scroll_area"><table><tbody id="' + e + '_content_area" class="clusterize-content"><tr class="clusterize-no-data"></tr></tbody></table></div></div>'), t.find(".loading_wrap span").css("color", "#007CBA").text("Загрузка..."), t.find(".loading_wrap").css("display", "flex").css("z-index", "999").css("opacity", "1"), jQuery.ajax({
-              url: "/json/" + e + ".json",
+              url: "/pikastats/08-2017/bonuspage/json/" + e + ".json",
               type: "GET"
             }).done(function (l) {
               t.find(".el-input__inner").attr("id", e + "_search");
