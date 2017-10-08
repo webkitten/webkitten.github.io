@@ -1,0 +1,15 @@
+{
+  "name": "bonuspage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bonuspage.js",
+  "scripts": {
+    "start": "node bonuspage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "element-theme-default": "^1.4.1"
+  }
+}
